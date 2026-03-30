@@ -1,1 +1,342 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elnatan Lazar — Software Developer</title>
+  <meta name="description" content="Elnatan Lazar — CS student at Ariel University. C++, Java, Python developer. Check out my projects and get in touch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="#hero">EL<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn-outline" href="#contact">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting">Hi there, I'm</p>
+      <h1 class="hero-name">Elnatan Lazar</h1>
+      <h2 class="hero-role">
+        <span id="typewriter"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-sub">
+        3rd-year Computer Science student at <strong>Ariel University</strong>.<br/>
+        I build things with C++, Java &amp; Python — from games to OS-level systems.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Elnatan-lazar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/elnatan-lazar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:elnatan.lazar@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down bounce"></i>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a passionate software developer with a love for building elegant solutions to complex problems.
+            Currently studying Computer Science at <strong>Ariel University</strong>, I've worked across a wide range of domains —
+            from low-level systems programming in C &amp; C++, to GUI-driven games with SFML, to web applications with JavaScript.
+          </p>
+          <p>
+            My strongest projects include a fully-featured <strong>Monopoly game with SFML graphics</strong> (including animations and multiplayer),
+            and a multi-stage <strong>TCP/UDP networking server</strong> built for an operating systems course — demonstrating skills that go well
+            beyond typical coursework.
+          </p>
+          <p>
+            I'm looking for my first professional role or internship where I can keep growing, contribute meaningfully, and build things that matter.
+          </p>
+          <div class="about-facts">
+            <div class="fact"><i class="fas fa-graduation-cap"></i><span>Ariel University, B.Sc CS</span></div>
+            <div class="fact"><i class="fas fa-map-marker-alt"></i><span>Israel</span></div>
+            <div class="fact"><i class="fas fa-code"></i><span>12 Public Repos on GitHub</span></div>
+            <div class="fact"><i class="fas fa-language"></i><span>Hebrew &amp; English</span></div>
+          </div>
+        </div>
+        <div class="about-card reveal">
+          <div class="card-glow"></div>
+          <div class="about-avatar">
+            <div class="avatar-placeholder"><span>EL</span></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num" data-target="12">0</span><span class="stat-label">GitHub Repos</span></div>
+            <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Languages</span></div>
+            <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Years Coding</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Skills &amp; <span>Technologies</span></h2>
+      <p class="section-sub">Technologies I work with on a daily basis</p>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span class="tag tag-cpp">C++</span>
+            <span class="tag tag-c">C</span>
+            <span class="tag tag-java">Java</span>
+            <span class="tag tag-python">Python</span>
+            <span class="tag tag-js">JavaScript</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="bar-label"><span>C++</span><span>90%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="bar-label"><span>Java</span><span>85%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-w="85"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="bar-label"><span>Python</span><span>80%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="bar-label"><span>C</span><span>80%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="bar-label"><span>JavaScript</span><span>65%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-w="65"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-tools"></i> Tools &amp; Frameworks</h3>
+          <div class="tech-icons">
+            <div class="tech-icon"><i class="fab fa-git-alt" style="color:#F05032"></i><span>Git</span></div>
+            <div class="tech-icon"><i class="fab fa-github"></i><span>GitHub</span></div>
+            <div class="tech-icon"><i class="fab fa-linux" style="color:#FCC624"></i><span>Linux</span></div>
+            <div class="tech-icon"><i class="fas fa-film" style="color:#00BCD4"></i><span>SFML</span></div>
+            <div class="tech-icon"><i class="fab fa-java" style="color:#007396"></i><span>Java</span></div>
+            <div class="tech-icon"><i class="fas fa-cubes" style="color:#00BCD4"></i><span>CMake</span></div>
+            <div class="tech-icon"><i class="fab fa-python" style="color:#3776AB"></i><span>Python</span></div>
+            <div class="tech-icon"><i class="fas fa-terminal" style="color:#4CAF50"></i><span>Bash</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-brain"></i> Concepts</h3>
+          <div class="concept-pills">
+            <span>Design Patterns</span><span>Data Structures</span><span>Algorithms</span>
+            <span>OOP</span><span>OS Internals</span><span>TCP/UDP Networking</span>
+            <span>Multithreading</span><span>Memory Management</span><span>AI Search</span>
+            <span>Reactor / Proactor</span><span>SFML GUI</span><span>EXIF / File I/O</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <p class="section-sub">Things I've built — click any card to view on GitHub</p>
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal" onclick="window.open('https://github.com/Elnatan-lazar/Monopoly-Game-Project','_blank')">
+          <div class="project-badge">&#11088; Featured</div>
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+              <i class="fas fa-chess-board"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Elnatan-lazar/Monopoly-Game-Project" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Monopoly — SFML Edition</h3>
+          <p>Full Monopoly board game in C++ with a beautiful SFML graphical interface. Features animations, multiplayer support, property trading, and complete game logic. Includes a YouTube demo.</p>
+          <div class="project-tech"><span>C++</span><span>SFML</span><span>CMake</span><span>OOP</span></div>
+        </div>
+
+        <div class="project-card reveal" onclick="window.open('https://github.com/Elnatan-lazar/operating-systems','_blank')">
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+              <i class="fas fa-microchip"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Elnatan-lazar/operating-systems" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Operating Systems Projects</h3>
+          <p>4 deep C/C++ projects: signals &amp; IPC, TCP/UDP atom warehouse with <code>select()</code>, a custom Reactor &amp; Proactor library, and Eulerian circuit detection over TCP.</p>
+          <div class="project-tech"><span>C++</span><span>Linux</span><span>TCP/UDP</span><span>Pthreads</span></div>
+        </div>
+
+        <div class="project-card reveal" onclick="window.open('https://github.com/Elnatan-lazar/Monopoly','_blank')">
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+              <i class="fas fa-terminal"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Elnatan-lazar/Monopoly" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Monopoly — Terminal</h3>
+          <p>A complete terminal-based Monopoly game written in C. Three play modes, full property/trade logic, and clean ASCII UI — built with a Makefile.</p>
+          <div class="project-tech"><span>C</span><span>Makefile</span><span>Terminal UI</span></div>
+        </div>
+
+        <div class="project-card reveal" onclick="window.open('https://github.com/Elnatan-lazar/Course-Registration-System','_blank')">
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Elnatan-lazar/Course-Registration-System" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Course Registration System</h3>
+          <p>Java system demonstrating Singleton, Factory, and Observer design patterns in a realistic course enrollment scenario.</p>
+          <div class="project-tech"><span>Java</span><span>Design Patterns</span><span>OOP</span></div>
+        </div>
+
+        <div class="project-card reveal" onclick="window.open('https://github.com/Elnatan-lazar/Searching_Algorithms','_blank')">
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,#fa709a,#fee140)">
+              <i class="fas fa-route"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Elnatan-lazar/Searching_Algorithms" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>AI Searching Algorithms</h3>
+          <p>Java implementation of BFS and IDA* pathfinding with custom heuristics — university AI assignment exploring search space efficiency.</p>
+          <div class="project-tech"><span>Java</span><span>BFS</span><span>IDA*</span><span>AI</span></div>
+        </div>
+
+        <div class="project-card reveal" onclick="window.open('https://elnatan-lazar.github.io/mortar-game/','_blank')">
+          <div class="project-badge" style="background:#00c853">&#9654; Live Demo</div>
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,#f7971e,#ffd200)">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Elnatan-lazar/mortar-game" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+              <a href="https://elnatan-lazar.github.io/mortar-game/" target="_blank" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>Mortar Game</h3>
+          <p>Browser-based cannon shooting game built with HTML5 Canvas and JavaScript. Playable live in your browser — no install needed.</p>
+          <div class="project-tech"><span>JavaScript</span><span>HTML5</span><span>Canvas</span></div>
+        </div>
+
+        <div class="project-card reveal" onclick="window.open('https://github.com/Elnatan-lazar/Flight-Management-System','_blank')">
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">
+              <i class="fas fa-plane"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Elnatan-lazar/Flight-Management-System" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Flight Management System</h3>
+          <p>Java system using the Composite design pattern to model hierarchical flight structures — airports, routes, and flights.</p>
+          <div class="project-tech"><span>Java</span><span>Composite Pattern</span><span>OOP</span></div>
+        </div>
+
+        <div class="project-card reveal" onclick="window.open('https://github.com/Elnatan-lazar/Change-Dates-of-Photos','_blank')">
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,#30cfd0,#667eea)">
+              <i class="fas fa-camera"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Elnatan-lazar/Change-Dates-of-Photos" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Photo Date Sync Utility</h3>
+          <p>Python utility that reads EXIF metadata from photos and syncs file-system timestamps to match — fixes photo library sorting instantly.</p>
+          <div class="project-tech"><span>Python</span><span>EXIF</span><span>Automation</span></div>
+        </div>
+
+      </div>
+      <div class="more-projects">
+        <a href="https://github.com/Elnatan-lazar" target="_blank" class="btn-outline-lg">
+          <i class="fab fa-github"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="section-sub">
+        I'm currently looking for internships and junior developer roles.<br/>
+        My inbox is always open — whether it's a job offer, a question, or just a hello.
+      </p>
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="mailto:elnatan.lazar@gmail.com">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p>elnatan.lazar@gmail.com</p>
+        </a>
+        <a class="contact-card reveal" href="https://github.com/Elnatan-lazar" target="_blank">
+          <i class="fab fa-github"></i>
+          <h3>GitHub</h3>
+          <p>Elnatan-lazar</p>
+        </a>
+        <a class="contact-card reveal" href="https://www.linkedin.com/in/elnatan-lazar" target="_blank">
+          <i class="fab fa-linkedin"></i>
+          <h3>LinkedIn</h3>
+          <p>Elnatan Lazar</p>
+        </a>
+      </div>
+      <div class="contact-cta reveal">
+        <a href="mailto:elnatan.lazar@gmail.com" class="btn-primary btn-lg">
+          <i class="fas fa-paper-plane"></i> Send Me a Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; Built by <strong>Elnatan Lazar</strong> &nbsp;&middot;&nbsp; 2025</p>
+    <p class="footer-sub">CS Student &nbsp;&middot;&nbsp; Ariel University &nbsp;&middot;&nbsp; Open to opportunities</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
