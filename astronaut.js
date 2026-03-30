@@ -460,10 +460,10 @@
     const targetTop  = Math.max(60, astroRect.top  - 110);
 
     shipEl.style.transition = 'none';
-    shipEl.style.left    = (window.innerWidth + 30) + 'px';
-    shipEl.style.top     = targetTop + 'px';
-    shipEl.style.opacity = '0';
-    shipEl.classList.add('show');
+    shipEl.style.left = (window.innerWidth + 30) + 'px';
+    shipEl.style.top  = targetTop + 'px';
+    shipEl.style.opacity = '';   // clear any leftover inline opacity
+    shipEl.classList.add('show'); // CSS handles opacity:1
 
     requestAnimationFrame(() => requestAnimationFrame(() => {
       shipEl.style.transition = 'left 1.6s cubic-bezier(.25,.46,.45,.94)';
@@ -507,12 +507,10 @@
         scheduleNextShip();
       }, 850);
     } else {
-      shipEl.style.transition = 'left 1s ease-in, opacity .6s .4s';
-      shipEl.style.left    = (window.innerWidth + 200) + 'px';
-      shipEl.style.opacity = '0';
+      shipEl.style.transition = 'left 1s ease-in';
+      shipEl.style.left = (window.innerWidth + 200) + 'px';
+      setTimeout(() => shipEl.classList.remove('show'), 400); // fade out via CSS
       setTimeout(() => {
-        shipEl.classList.remove('show');
-        shipEl.style.opacity = '';
         shipEl.style.transition = 'none';
         astroSvg.style.animation = 'astroBob 3.2s ease-in-out infinite';
         showBubble('They\'ll be back... they always come back 😰', 3500);
