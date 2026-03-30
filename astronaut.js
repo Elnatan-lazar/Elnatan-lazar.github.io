@@ -67,6 +67,7 @@
       filter: drop-shadow(0 6px 18px rgba(108,99,255,.5));
       animation: astroBob 3.2s ease-in-out infinite;
       overflow: visible;
+      /* NO hover transform here — JS handles flee */
     }
     @keyframes astroBob {
       0%,100% { transform: translateY(0px); }
@@ -387,30 +388,29 @@
     const t = (timestamp % TRAVEL_PERIOD) / TRAVEL_PERIOD;
     baseY = minY + (maxY - minY) * (0.5 - 0.5 * Math.cos(2 * Math.PI * t));
 
-    // Flee from cursor
-    // Approximate astronaut center on screen
-    const astroRight  = window.innerWidth - 30; // scene right:30px
-    const astroCenterX = astroRight - 40;       // center of 80px element
-    const astroCenterY = baseY + fleeY + 75;    // vertical center approx
+    // Flee from cursor — use real DOM position so it's always accurate
+    const rect = astroWrapper.getBoundingClientRect();
+    const astroCenterX = rect.left + rect.width  / 2;
+    const astroCenterY = rect.top  + rect.height / 2;
 
     const dx   = astroCenterX - mouseX;
     const dy   = astroCenterY - mouseY;
     const dist = Math.sqrt(dx * dx + dy * dy);
-    const FLEE_R = 150;
+    const FLEE_R = 160;
 
-    if (dist < FLEE_R && dist > 1) {
-      const strength = (1 - dist / FLEE_R) * 6;
+    if (dist < FLEE_R && dist > 0.5) {
+      const strength = (1 - dist / FLEE_R) * 7;
       fleeX += (dx / dist) * strength;
       fleeY += (dy / dist) * strength;
     }
 
     // Decay flee back to 0
-    fleeX *= 0.93;
-    fleeY *= 0.93;
+    fleeX *= 0.92;
+    fleeY *= 0.92;
 
-    // Clamp: only allow fleeing LEFT (toward page center), not further right off-screen
-    fleeX = Math.max(-260, Math.min(20, fleeX));
-    fleeY = Math.max(-180, Math.min(180, fleeY));
+    // Astronaut is on the right edge — only allow fleeing LEFT (never push it off-screen right)
+    fleeX = Math.max(-300, Math.min(0, fleeX));
+    fleeY = Math.max(-200, Math.min(200, fleeY));
 
     // Apply combined transform: flee offset + vertical travel
     scene.style.transform = `translate(${fleeX}px, ${baseY + fleeY}px)`;
