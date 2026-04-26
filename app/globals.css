@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #0a0a0f;
+  --color-bg-card: #111118;
+  --color-bg-card-hover: #16161f;
+  --color-border: #1e1e2e;
+  --color-accent: #7c3aed;
+  --color-accent-light: #a78bfa;
+  --color-accent-cyan: #22d3ee;
+  --color-text-primary: #f1f5f9;
+  --color-text-muted: #94a3b8;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-primary);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #7c3aed40;
+    color: #f1f5f9;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2e1065;
+    border-radius: 9999px;
+  }
+}
+
+@layer utilities {
+  .glow-purple {
+    box-shadow: 0 0 40px #7c3aed30, 0 0 80px #7c3aed15;
+  }
+  .glow-cyan {
+    box-shadow: 0 0 40px #22d3ee30, 0 0 80px #22d3ee15;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #a78bfa, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-border {
+    border: 1px solid #1e1e2e;
+    background: #111118;
+  }
+  .card-border:hover {
+    border-color: #7c3aed50;
+  }
+  .noise-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+}
