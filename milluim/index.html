@@ -12,7 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>❤️</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Press+Start+2P&family=Rubik+Pixels&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,7 +28,7 @@
   </header>
 
   <!-- ===== ספירה לאחור ===== -->
-  <section class="countdown" id="countdown" aria-live="polite">
+  <section class="countdown" id="countdown" dir="ltr" aria-live="polite">
     <div class="unit"><span class="num" id="cdDays">00</span><span class="lbl">ימים</span></div>
     <span class="sep">:</span>
     <div class="unit"><span class="num" id="cdHours">00</span><span class="lbl">שעות</span></div>
@@ -55,9 +55,12 @@
       <h2 class="panel-title">אנחנו, בפיקסלים</h2>
       <canvas id="scene" class="pixel" width="800" height="450" role="img"
               aria-label="אנימציית פיקסל ארט של בני הזוג"></canvas>
-      <p class="scene-title" id="sceneTitle">נדנדה בפארק</p>
-      <div class="dots" id="sceneDots" role="tablist" aria-label="בחירת סצנה"></div>
-      <p class="caption tiny">לחיצה על התמונה מעבירה לסצנה הבאה</p>
+      <div class="scene-nav">
+        <button type="button" id="prevScene" aria-label="הסצנה הקודמת">▶</button>
+        <p class="scene-title" id="sceneTitle">נדנדה בפארק</p>
+        <button type="button" id="nextScene" aria-label="הסצנה הבאה">◀</button>
+      </div>
+      <p class="caption tiny"><span id="sceneNum">1</span> מתוך <span id="sceneTotal">25</span> · לחיצה על התמונה מעבירה לסצנה הבאה</p>
     </section>
 
   </div>
