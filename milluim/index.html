@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>המילואים נגמרים עוד…</title>
+<meta name="description" content="ספירה לאחור לסיום המילואים — עם שעון חול שכל גרגר שלו הופך ללב, וסצנות פיקסל־ארט שלנו." />
+<meta name="theme-color" content="#160d24" />
+<meta property="og:title" content="המילואים נגמרים עוד…" />
+<meta property="og:description" content="ספירה לאחור עד שחוזרים הביתה ❤️" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>❤️</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Press+Start+2P&family=Rubik+Pixels&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="bg-stars" aria-hidden="true"></div>
+<div class="bg-hearts" id="bgHearts" aria-hidden="true"></div>
+
+<main class="wrap">
+
+  <header class="head">
+    <p class="kicker">ספירה לאחור עד שחוזרים להיות ביחד</p>
+    <h1 class="title" id="mainTitle">המילואים נגמרים עוד:</h1>
+  </header>
+
+  <!-- ===== ספירה לאחור ===== -->
+  <section class="countdown" id="countdown" aria-live="polite">
+    <div class="unit"><span class="num" id="cdDays">00</span><span class="lbl">ימים</span></div>
+    <span class="sep">:</span>
+    <div class="unit"><span class="num" id="cdHours">00</span><span class="lbl">שעות</span></div>
+    <span class="sep">:</span>
+    <div class="unit"><span class="num" id="cdMins">00</span><span class="lbl">דקות</span></div>
+    <span class="sep">:</span>
+    <div class="unit"><span class="num" id="cdSecs">00</span><span class="lbl">שניות</span></div>
+  </section>
+
+  <p class="target" id="targetLine"></p>
+
+  <!-- ===== הגוף: שעון חול + סצנות ===== -->
+  <div class="stage">
+
+    <section class="panel hourglass-panel">
+      <h2 class="panel-title">שעון החול של האהבה</h2>
+      <canvas id="hourglass" class="pixel" width="336" height="600" role="img"
+              aria-label="שעון חול מונפש: גרגרי חול נופלים והופכים ללבבות אדומים"></canvas>
+      <p class="caption">כל גרגר חול שנופל למטה — הופך ללב קטן <span class="h">❤</span></p>
+      <p class="caption tiny"><span id="heartCount">0</span> לבבות נאספו עד עכשיו</p>
+    </section>
+
+    <section class="panel scene-panel">
+      <h2 class="panel-title">אנחנו, בפיקסלים</h2>
+      <canvas id="scene" class="pixel" width="800" height="450" role="img"
+              aria-label="אנימציית פיקסל ארט של בני הזוג"></canvas>
+      <p class="scene-title" id="sceneTitle">נדנדה בפארק</p>
+      <div class="dots" id="sceneDots" role="tablist" aria-label="בחירת סצנה"></div>
+      <p class="caption tiny">לחיצה על התמונה מעבירה לסצנה הבאה</p>
+    </section>
+
+  </div>
+
+  <footer class="foot">
+    <p>נבנה באהבה <span class="h">❤</span> בשבילך</p>
+  </footer>
+</main>
+
+<!-- מסך סיום -->
+<div class="done-overlay" id="doneOverlay" hidden>
+  <div class="done-card">
+    <p class="done-big">המילואים נגמרו!</p>
+    <p class="done-sub">חוזרים הביתה <span class="h">❤</span></p>
+    <button class="done-btn" id="doneClose">יאללה חוגגים</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
