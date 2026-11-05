@@ -199,3 +199,34 @@ footer { max-width: 1180px; margin: 0 auto; padding: 2rem var(--gutter) 3rem; co
   html { scroll-behavior: auto; }
   .circuit.tracing { animation: none; }
 }
+
+/* TI project: pipeline diagram */
+.pipeline {
+  list-style: none; counter-reset: step;
+  display: flex; flex-wrap: wrap; gap: .5rem 0;
+  margin: 1.25rem 0 .5rem; padding: 0;
+}
+.pipeline li {
+  counter-increment: step;
+  display: flex; align-items: center;
+  font-size: .9rem; font-weight: 500;
+}
+.pipeline li::before {
+  content: counter(step);
+  display: inline-grid; place-items: center;
+  width: 1.5rem; height: 1.5rem; margin-right: .45rem;
+  border: 2px solid var(--olive); border-radius: 50%;
+  font-size: .75rem; font-weight: 700; color: var(--olive);
+}
+.pipeline li:not(:last-child)::after {
+  content: ""; width: 1.4rem; height: 2px; margin: 0 .6rem;
+  background: var(--rule);
+}
+.pipeline-note { color: var(--graphite); font-size: .92rem; margin: 0 0 1rem !important; }
+.outcome { border-left: 3px solid var(--olive); padding-left: .9rem; }
+.when { color: var(--graphite); font-size: .92rem; margin: .1rem 0 0 !important; }
+
+@media (max-width: 560px) {
+  .pipeline { flex-direction: column; gap: .4rem; }
+  .pipeline li:not(:last-child)::after { display: none; }
+}

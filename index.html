@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elnatan Lazar — Software Engineer</title>
-  <meta name="description" content="Elnatan Lazar, software engineer. Final-year B.Sc. Computer Science at Ariel University (2026). Systems work in C/C++, plus Java and Python." />
+  <meta name="description" content="Elnatan Lazar, software engineer. Former Software Engineer Intern at Texas Instruments, building BLE security test automation with Python, pytest and Jenkins. B.Sc. Computer Science, Ariel University (2026)." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
     <a class="mark" href="#">Elnatan Lazar</a>
     <nav aria-label="Sections">
       <a href="#work">Work</a>
-      <a href="#background">Background</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -28,10 +28,10 @@
         <h1>Elnatan<br />Lazar</h1>
         <p class="lede">
           Software engineer finishing a B.Sc. in Computer Science at Ariel University.
-          I like the layer where programs meet the operating system: sockets, threads, event loops.
-          Before that I was an Armored Corps officer in the IDF.
+          At Texas Instruments I built an automated security validation framework for Bluetooth Low Energy devices,
+          now used by R&amp;D before releases. Before that I was an Armored Corps officer in the IDF.
         </p>
-        <p class="status"><span class="dot" aria-hidden="true"></span>Looking for a junior software engineering role, starting 2026</p>
+        <p class="status"><span class="dot" aria-hidden="true"></span>Looking for a software engineering role in backend, automation or DevOps, starting 2026</p>
         <div class="links">
           <a class="btn" href="mailto:elnatan100@gmail.com">Email me</a>
           <a href="https://github.com/Elnatan-lazar">GitHub</a>
@@ -68,6 +68,34 @@
 
     <section id="work" class="block">
       <h2>Selected work</h2>
+
+      <article class="feature feature-ti">
+        <div class="feature-head">
+          <h3>Automated BLE security validation framework</h3>
+          <p class="stack">Texas Instruments, 2024–2025. Python, pytest, Jenkins, Groovy, TI UniFlash</p>
+        </div>
+        <p>
+          TI's Bluetooth Low Energy devices have to be checked against SweynTooth, a published set of BLE vulnerabilities
+          that can make devices crash or misbehave. Running those checks by hand for every SDK and firmware version was
+          hard to repeat reliably. I designed and built the system that runs them end to end on real hardware.
+        </p>
+        <ol class="pipeline" aria-label="Validation pipeline">
+          <li>Prepare firmware</li>
+          <li>Flash devices</li>
+          <li>Configure environment</li>
+          <li>Run security tests</li>
+          <li>Collect logs</li>
+          <li>Evaluate pass/fail</li>
+        </ol>
+        <p class="pipeline-note">Each run is triggered and reported through Jenkins.</p>
+        <ul>
+          <li>Wrote the Python and pytest orchestration that flashes boards, runs the tests, captures device responses and produces pass/fail results</li>
+          <li>Built the Jenkins pipelines in Groovy so validation runs automatically on Windows test agents</li>
+          <li>Mapped known vulnerabilities to the SDK versions they affect, and debugged problems spanning software, firmware, hardware and test infrastructure</li>
+          <li>Hardware: TI CC2640R2 and CC2340R5, Nordic nRF52840</li>
+        </ul>
+        <p class="outcome">I presented the framework to engineering teams and management, and R&amp;D adopted it for pre-release validation. The code is proprietary to TI.</p>
+      </article>
 
       <article class="feature">
         <div class="feature-head">
@@ -129,12 +157,17 @@
       </ul>
     </section>
 
-    <section id="background" class="block">
-      <h2>Background</h2>
+    <section id="experience" class="block">
+      <h2>Experience</h2>
       <ol class="timeline">
         <li>
           <h3>Officer, Armored Corps, IDF</h3>
           <p>Served as a Lieutenant, responsible for soldiers, equipment and getting the job done under pressure.</p>
+        </li>
+        <li>
+          <h3>Software Engineer Intern, Texas Instruments</h3>
+          <p class="when">2024–2025, Ra'anana</p>
+          <p>Developed an end-to-end BLE security validation framework using Python, pytest and Jenkins, automating firmware flashing, vulnerability testing and result analysis on physical embedded devices. Integrated it into CI/CD and delivered a system adopted by R&amp;D for pre-release validation.</p>
         </li>
         <li>
           <h3>B.Sc. Computer Science, Ariel University</h3>
@@ -145,7 +178,15 @@
       <div class="skills">
         <div>
           <h3>Languages</h3>
-          <p>C++, C, Java, Python, JavaScript</p>
+          <p>Python, C++, C, Java, JavaScript, Groovy</p>
+        </div>
+        <div>
+          <h3>Automation and CI/CD</h3>
+          <p>pytest, Jenkins pipelines, Windows build and test agents, Git</p>
+        </div>
+        <div>
+          <h3>Embedded</h3>
+          <p>Bluetooth Low Energy, firmware flashing with TI UniFlash, hardware-software integration, security validation</p>
         </div>
         <div>
           <h3>Systems</h3>
@@ -153,7 +194,7 @@
         </div>
         <div>
           <h3>Tools</h3>
-          <p>Git, CMake, Make, Bash, SFML</p>
+          <p>CMake, Make, Bash, SFML</p>
         </div>
         <div>
           <h3>Languages I speak</h3>
